@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rep-YT-maI">
+    <dependencies>
+        <deployment version="1536" defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller - Christmas Wish List-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G5A-y2-Loi"/>
+                        <viewControllerLayoutGuide type="bottom" id="QH8-s2-aOA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="R6k-xC-WZj">
+                                <rect key="frame" x="0.0" y="-1" width="320" height="505"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" alpha="0.75" contentMode="scaleToFill" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" sectionIndexMinimumDisplayRowCount="3" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="4Zq-mw-B9v">
+                                <rect key="frame" x="0.0" y="0.0" width="322" height="505"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="O9A-wf-fkM"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="Npc-EY-OfN"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="4Zq-mw-B9v" secondAttribute="bottom" constant="-1" id="1tl-hE-Bph"/>
+                            <constraint firstAttribute="trailing" secondItem="4Zq-mw-B9v" secondAttribute="trailing" constant="-2" id="8hQ-Cb-z5M"/>
+                            <constraint firstItem="4Zq-mw-B9v" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="B2J-lM-8ro"/>
+                            <constraint firstItem="4Zq-mw-B9v" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="p6K-Be-THf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Christmas Wish List" id="ezv-6Y-L6Z">
+                        <barButtonItem key="rightBarButtonItem" id="Dom-jW-FbJ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="Bg7-tc-jlb">
+                                <rect key="frame" x="244" y="6" width="71" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.51959493889999997" green="0.0" blue="0.036686821610000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Edit">
+                                            <attributes>
+                                                <color key="NSColor" red="0.091784189660000001" green="0.38614555029999997" blue="0.04417067643" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="onClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="O3l-qU-y7d"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="charted" destination="4Zq-mw-B9v" id="c8U-XI-lMC"/>
+                        <segue destination="eDj-GR-Rqv" kind="push" identifier="GiftData" id="2LP-Rs-8my"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="480" y="59"/>
+        </scene>
+        <!--Gift Data - Gift Details-->
+        <scene sceneID="nhk-nq-vQb">
+            <objects>
+                <viewController id="eDj-GR-Rqv" customClass="GiftData" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qeZ-cg-XLD"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q7h-Q2-feR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5A1-ef-ay1">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="B7l-Gp-Uvi">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="505"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product detail goes here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="303" translatesAutoresizingMaskIntoConstraints="NO" id="g1B-H2-zFg">
+                                <rect key="frame" x="8" y="264" width="303" height="185"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="185" id="pkh-lz-FtO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="santa.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="z6q-fX-3Ux">
+                                <rect key="frame" x="8" y="28" width="200" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="NkD-Ys-kXf"/>
+                                    <constraint firstAttribute="height" constant="150" id="fqG-ET-3ds"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="117" translatesAutoresizingMaskIntoConstraints="NO" id="zed-tm-DwT">
+                                <rect key="frame" x="194" y="55" width="117" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="117" id="BBN-fQ-J91"/>
+                                    <constraint firstAttribute="height" constant="59" id="RMI-mo-QF3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="g1B-H2-zFg" secondAttribute="trailing" constant="9" id="9Ae-7q-25C"/>
+                            <constraint firstItem="B7l-Gp-Uvi" firstAttribute="top" secondItem="5A1-ef-ay1" secondAttribute="top" id="G0g-zd-Faj"/>
+                            <constraint firstItem="B7l-Gp-Uvi" firstAttribute="leading" secondItem="5A1-ef-ay1" secondAttribute="leading" id="SDK-RZ-Yzn"/>
+                            <constraint firstAttribute="bottom" secondItem="B7l-Gp-Uvi" secondAttribute="bottom" constant="-1" id="Uzc-dh-7FQ"/>
+                            <constraint firstAttribute="bottom" secondItem="g1B-H2-zFg" secondAttribute="bottom" constant="55" id="WGr-V0-sXn"/>
+                            <constraint firstItem="g1B-H2-zFg" firstAttribute="leading" secondItem="5A1-ef-ay1" secondAttribute="leading" constant="8" id="Z3J-8E-e4g"/>
+                            <constraint firstItem="zed-tm-DwT" firstAttribute="top" secondItem="5A1-ef-ay1" secondAttribute="top" constant="55" id="b1H-G9-GWl"/>
+                            <constraint firstItem="z6q-fX-3Ux" firstAttribute="top" secondItem="5A1-ef-ay1" secondAttribute="top" constant="28" id="dPb-h9-vx5"/>
+                            <constraint firstItem="z6q-fX-3Ux" firstAttribute="leading" secondItem="5A1-ef-ay1" secondAttribute="leading" constant="8" id="den-VR-Cfy"/>
+                            <constraint firstAttribute="trailing" secondItem="B7l-Gp-Uvi" secondAttribute="trailing" id="gLi-vv-qx5"/>
+                            <constraint firstAttribute="trailing" secondItem="zed-tm-DwT" secondAttribute="trailing" constant="9" id="yGW-Xj-nqd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Gift Details" id="oHR-rd-0h0"/>
+                    <connections>
+                        <outlet property="prodImage" destination="z6q-fX-3Ux" id="F0R-Dk-5TR"/>
+                        <outlet property="prodName" destination="zed-tm-DwT" id="rWl-UE-5aL"/>
+                        <outlet property="proddetail" destination="g1B-H2-zFg" id="T5q-10-Df7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z81-r9-nOs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="975" y="59"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cNM-75-YVY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rep-YT-maI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="v16-RB-NaY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.51959493889999997" green="0.0" blue="0.036686821610000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.091784189660000001" green="0.38614555029999997" blue="0.04417067643" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="0.0"/>
+                            <color key="textColor" red="0.51959493889999997" green="0.0" blue="0.036686821610000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="hpq-KP-r5l"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="koD-3J-G1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-46" y="59"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg.jpg" width="1024" height="768"/>
+        <image name="santa.jpg" width="1000" height="1389"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
