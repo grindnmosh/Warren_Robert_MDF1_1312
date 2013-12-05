@@ -131,8 +131,6 @@
         [santaSack removeObjectAtIndex:indexPath.section];
         //remove from arrays
         [charted deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        //turn editing off
-        [charted setEditing:false animated:true];
     }
 }
 
